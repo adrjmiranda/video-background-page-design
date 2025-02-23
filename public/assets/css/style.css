@@ -64,6 +64,13 @@ ul {
 	list-style: none;
 }
 
+button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
 /***************** Reusable *******************/
 .container {
 	max-width: var(--container-mw);
@@ -76,6 +83,7 @@ ul {
 }
 
 .logo,
+#toggle-menu,
 .navbar-menu {
 	position: relative;
 	z-index: 10;
@@ -160,6 +168,19 @@ ul {
 	justify-content: space-between;
 	align-items: center;
 	height: 80px;
+}
+
+#toggle-menu {
+	color: var(--white-color-00);
+	font-size: var(--lg-fs);
+	transition: 0.25s ease-in-out;
+	justify-items: center;
+	align-items: center;
+	display: none;
+}
+
+#toggle-menu:hover {
+	transform: scale(1.1);
 }
 
 .navbar-menu {
@@ -251,6 +272,29 @@ ul {
 /************** End of HOME ***************/
 
 /***************** Responsiveness *******************/
+@media screen and (max-width: 610px) {
+	.navbar-content {
+		height: auto;
+		padding-block: 0.85rem;
+		flex-wrap: wrap;
+	}
+
+	#toggle-menu {
+		display: flex;
+	}
+
+	.navbar-menu {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		padding-bottom: 0.85rem;
+	}
+
+	.navbar-menu.show {
+		display: flex;
+	}
+}
+
 @media screen and (max-width: 576px) {
 	:root {
 		--lg-fs: 1rem;
