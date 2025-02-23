@@ -95,6 +95,7 @@ img {
 #home {
 	position: relative;
 	min-height: 100vh;
+	overflow-x: hidden;
 }
 
 #home::before,
@@ -146,6 +147,7 @@ img {
 
 .header-title {
 	font-size: var(--xxxl-fs);
+	text-align: center;
 }
 
 .header-title span {
@@ -182,5 +184,34 @@ img {
 /************** End of HOME ***************/
 
 /***************** Responsiveness *******************/
-/* TODO: Create Responsiveness style */
+@media screen and (max-width: 576px) {
+	:root {
+		--lg-fs: 1rem;
+	}
+
+	.header-links {
+		gap: 1rem;
+	}
+}
+
+@media screen and (max-width: 470px) {
+	:root {
+		--xxxl-fs: 3.35rem;
+	}
+
+	.header-links,
+	.btn {
+		width: 100%;
+	}
+
+	.header-links {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 370px) {
+	.navbar-content {
+		justify-content: center;
+	}
+}
 /************** End of Responsiveness ***************/
