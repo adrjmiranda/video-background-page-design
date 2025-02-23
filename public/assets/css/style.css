@@ -1,0 +1,57 @@
+/***************** Imports *******************/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+:root {
+	/* Colors */
+	--primary-color: #ff6136;
+	--secondary-color: #ff9700;
+	--tertiary-color: #ffb400;
+
+	--white-color-00: #ffffff;
+
+	/* Font Family */
+	--title-ff: 'Anton', 'Arial Black', 'Helvetica', sans-serif;
+	--text-ff: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+	/* Font Weight */
+	--normal-fw: 400;
+	--medium-fw: 500;
+
+	/* Font Size */
+	--base-fs: 1rem;
+	--lg-fs: 1.25rem;
+	--xl-fs: 2.25rem;
+
+	/* Width */
+	--container-mw: 1280px;
+
+	/* Padding */
+	--container-pi: 0.85rem;
+
+	/* Border Radius */
+	--btn-radius: 0.35rem;
+}
+
+/***************** General *******************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--text-ff);
+}
+
+body {
+	color: var(--white-color-00);
+	font-size: var(--base-fs);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--title-ff);
+	font-size: var(--xl-fs);
+}
+
+a {
+	text-decoration: none;
+}
