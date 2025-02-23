@@ -5,6 +5,8 @@
 /* Variables */
 :root {
 	/* Colors */
+	--black-color-00: #000000;
+
 	--primary-color: #ff6136;
 	--secondary-color: #ff9700;
 	--tertiary-color: #ffb400;
@@ -22,7 +24,7 @@
 	/* Font Size */
 	--base-fs: 1rem;
 	--lg-fs: 1.25rem;
-	--xl-fs: 2.25rem;
+	--xxxl-fs: 4.35rem;
 
 	/* Width */
 	--container-mw: 1280px;
@@ -45,13 +47,140 @@
 body {
 	color: var(--white-color-00);
 	font-size: var(--base-fs);
-}
-
-:is(h1, h2, h3, h4, h5, h6) {
-	font-family: var(--title-ff);
-	font-size: var(--xl-fs);
+	overflow-x: hidden;
 }
 
 a {
 	text-decoration: none;
 }
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+/***************** Reusable *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+	margin: 0 auto;
+}
+
+.logo {
+	margin-left: -0.5rem;
+}
+
+.logo img {
+	width: 60px;
+}
+
+.btn {
+	border-radius: var(--btn-radius);
+	color: var(--white-color-00);
+	font-size: var(--lg-fs);
+	text-transform: capitalize;
+	text-align: center;
+	padding: 0.85rem 3.35rem;
+	opacity: 0.85;
+	transition: 0.35s ease-in-out;
+	font-weight: var(--medium-fw);
+}
+
+.btn:hover {
+	opacity: 1;
+}
+
+/***************** HOME *******************/
+#home {
+	position: relative;
+	min-height: 100vh;
+}
+
+#home::before,
+#video {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+#video {
+	object-fit: cover;
+	z-index: 0;
+}
+
+#home::before {
+	z-index: 10;
+	background-color: var(--black-color-00);
+	opacity: 0.45;
+}
+
+#navbar,
+#header {
+	position: relative;
+	z-index: 20;
+}
+
+/***************** NABAR *******************/
+.navbar-content {
+	display: flex;
+	justify-content: space-between;
+	height: 80%;
+	align-items: center;
+}
+
+/************** End of NABAR ***************/
+
+/***************** HEADER *******************/
+.header-content {
+	display: flex;
+	min-height: calc(100vh - 80px);
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2.75rem;
+}
+
+.header-title {
+	font-size: var(--xxxl-fs);
+}
+
+.header-title span {
+	font-family: var(--title-ff);
+	font-size: var(--xxxl-fs);
+	font-weight: var(--normal-fw);
+}
+
+.header-title span:nth-child(1) {
+	color: var(--primary-color);
+}
+
+.header-title span:nth-child(2) {
+	color: var(--secondary-color);
+}
+
+.header-links {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 2.75rem;
+}
+
+.header-links .btn:first-child {
+	background-color: var(--tertiary-color);
+}
+
+.header-links .btn:last-child {
+	background-color: var(--white-color-00);
+	color: var(--tertiary-color);
+}
+
+/************** End of HEADER ***************/
+/************** End of HOME ***************/
+
+/***************** Responsiveness *******************/
+/* TODO: Create Responsiveness style */
+/************** End of Responsiveness ***************/
